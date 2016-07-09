@@ -1,0 +1,13 @@
+(source "gnu" "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+(source "melpa" "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+
+(depends-on "cask")
+(depends-on "company")
+(depends-on "flycheck")
+(depends-on "geiser")
+(depends-on "inf-ruby")
+(depends-on "monokai-theme")
+(depends-on "pallet")
+(depends-on "robe")
+(depends-on "ruby-electric")
+(depends-on "zenburn-theme")
