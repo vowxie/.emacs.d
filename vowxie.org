@@ -2,51 +2,52 @@
 ** 操作系统基础功能
 *** 包管理工具
 **** melpa
-#+BEGIN_SRC emacs-lisp
-(require 'package)
-(package-initialize)
-(setq package-archives
-'( ("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-   ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
-#+END_SRC
+     #+BEGIN_SRC emacs-lisp
+     (require 'package)
+     (package-initialize)
+     (setq package-archives
+     ’( ("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+     #+END_SRC
 **** cask&pallet
-#+BEGIN_SRC emacs-lisp
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
-(require 'pallet)
-(pallet-mode t)
+     #+BEGIN_SRC emacs-lisp
+     (require 'cask "~/.cask/cask.el")
+     (cask-initialize)
+     (require 'pallet)
+     (pallet-mode t)
 #+END_SRC
 ** 应用&游戏
 ** 编程相关
 *** company
-#+BEGIN_SRC emacs-lisp
-(add-hook 'after-init-hook 'global-company-mode)
-#+END_SRC
+    #+BEGIN_SRC emacs-lisp
+    (add-hook 'after-init-hook 'global-company-mode)
+    #+END_SRC
 *** flycheck
-#+BEGIN_SRC emacs-lisp
-(add-hook 'after-init-hook #'global-flycheck-mode)
-#+END_SRC
+    #+BEGIN_SRC emacs-lisp
+    (add-hook 'after-init-hook #'global-flycheck-mode)
+    #+END_SRC
 *** ruby
 **** inf-ruby
-#+BEGIN_SRC emacs-lisp
-(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
-(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
-;;(add-hook 'compilation-filter-hook 'inf-ruby-auto-enter)
-#+END_SRC
+    #+BEGIN_SRC emacs-lisp
+    (autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
+    (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+    ;;(add-hook 'compilation-filter-hook 'inf-ruby-auto-enter)
+    #+END_SRC
 **** robe
-#+BEGIN_SRC emacs-lsip
-(add-hook 'ruby-mode-hook 'robe-mode)
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
-#+END_SRC     
+     #+BEGIN_SRC emacs-lsip
+     (add-hook 'ruby-mode-hook 'robe-mode)
+     (eval-after-load 'company
+     '(push 'company-robe company-backends))
+     #+END_SRC     
 **** ruby-electric
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
+     #+BEGIN_SRC emacs-lisp
+     
+     #+END_SRC
 *** scheme
 **** geiser
-#+BEGIN_SRC emacs-lisp
-(setq geiser-active-implementations '(guile))
-#+END_SRC
+     #+BEGIN_SRC emacs-lisp
+     (setq geiser-active-implementations '(guile))
+     #+END_SRC
 
 * 基本功能
 ** 界面相关
@@ -55,11 +56,11 @@
     (load-theme 'zenburn 1)
     #+END_SRC
 *** 编辑区域
-#+BEGIN_SRC emacs-lisp
-(setq inhibit-splash-screen 1) ;;关闭启动画面
-(scroll-bar-mode -1) ;;关闭滑动条
-(global-linum-mode 1);;显示行号
-#+END_SRC
+    #+BEGIN_SRC emacs-lisp
+    (setq inhibit-splash-screen 1) ;;关闭启动画面
+    (scroll-bar-mode -1) ;;关闭滑动条
+    (global-linum-mode 1);;显示行号
+    #+END_SRC
 *** 状态栏
 **  键绑定
 
